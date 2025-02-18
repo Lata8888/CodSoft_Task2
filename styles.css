@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('tree.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.container {
+    background: #61e05f;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(12, 152, 44, 0.1);
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e72222;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #18d052;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s, background 0.3s;
+}
+
+input:focus {
+    border: 1px solid #5c9dff;
+    background: #d7dde2;
+}
+
+button {
+    padding: 10px;
+    margin-left: 10px;
+    border: none;
+    background: #5c9dff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #4791ff;
+    transform: scale(1.1);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #f3f3f3;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: background 0.3s, transform 0.3s;
+}
+
+li:hover {
+    background: #d3d3d3;
+    transform: scale(1.02);
+}
+
+li .remove-task {
+    background: #ff6b6b;
+    border: none;
+    color: #cfcfcf;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+li .remove-task:hover {
+    background: #934bff;
+    transform: scale(1.1);
+}
+
+
+@keyframes add-item {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes remove-item {
+    from {
+        opacity: 1;
+        transform: translateX(0); 
+       
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
